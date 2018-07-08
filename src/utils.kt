@@ -3,7 +3,7 @@ package main.utils
 class radio(
         var Estado: Boolean = false,
         var Frecuencia: String,
-        var Volumen: Int,
+        var Volumen: Int = 10,
         var Estacion: Double
 
 ){
@@ -13,6 +13,22 @@ class radio(
 
     fun apagar(){
         Estado = false
+    }
+
+    fun am(){
+        Frecuencia = "AM"
+    }
+
+    fun fm(){
+        Frecuencia = "FM"
+    }
+
+    fun subirVolumen(){
+        Volumen += 1
+    }
+
+    fun bajarVolumen(){
+        Volumen -= 1
     }
 
     override fun toString(): String {
