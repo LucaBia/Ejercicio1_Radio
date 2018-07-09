@@ -31,6 +31,11 @@ class radio(
         Volumen -= 1
     }
 
+    fun subirEstacion(a: Double, b: Double): Double{
+        return a + b
+    }
+
+
     override fun toString(): String {
         return """
             Radio:

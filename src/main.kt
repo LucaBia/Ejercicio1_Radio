@@ -2,6 +2,7 @@ package main
 
 import main.utils.*
 
+
 fun main(args: Array<String>) {
     val RadioInicial = radio(
             Estado = false,
@@ -56,6 +57,11 @@ fun main(args: Array<String>) {
             println(RadioInicial)
             println("")
         } else if (opcion == "5") {
+            println("Ingrese el valor de cuanto quiere subir la estación de radio (Ej: 3.5):")
+            var respuesta: String = readLine()!!
+            var respuesta2: Double = respuesta.toDouble()
+            val resultado: Double = RadioInicial.subirEstacion(89.7, respuesta2)
+            println (resultado)
 
         } else if (opcion == "6"){
 
