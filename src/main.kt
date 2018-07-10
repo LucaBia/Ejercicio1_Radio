@@ -30,11 +30,16 @@ fun main(args: Array<String>) {
         var opcion: String = readLine()!!
 
         if (opcion == "1") {
-            println("Encendiendo radio...")
-            println("")
-            RadioInicial.encender()
-            println(RadioInicial)
-            println("")
+            if (RadioInicial.Estado == true){
+                println("Su radio ya se encuentra encendido, no lo puede volver a encender")
+                println("")
+            }else{
+                println("Encendiendo radio...")
+                println("")
+                RadioInicial.encender()
+                println(RadioInicial)
+                println("")
+            }
 
         } else if (opcion == "2") {
             println("Cambiando frecuencia de radio...")
@@ -75,11 +80,17 @@ fun main(args: Array<String>) {
             println (RadioInicial)
             println("")
         }else if (opcion == "7"){
-            println("Apagando radio...")
-            println("")
-            RadioInicial.apagar()
-            println(RadioInicial)
-            println("")
+            if (RadioInicial.Estado == false){
+                println("Su radio ya se encuentra en estado apagado, no lo puede volver a apagar")
+                println("")
+            }else{
+                println("Apagando radio...")
+                println("")
+                RadioInicial.apagar()
+                println(RadioInicial)
+                println("")
+            }
+
         }
 
     } while (opcion != "8")
