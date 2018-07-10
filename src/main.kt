@@ -44,9 +44,16 @@ fun main(args: Array<String>) {
         } else if (opcion == "2") {
             println("Cambiando frecuencia de radio...")
             println("")
-            RadioInicial.am()
-            println(RadioInicial)
-            println("")
+            if (RadioInicial.Frecuencia == "AM"){
+                RadioInicial.fm()
+                println(RadioInicial)
+                println("")
+            }else{
+                RadioInicial.am()
+                println(RadioInicial)
+                println("")
+            }
+
 
         } else if (opcion == "3") {
             println("Subiendo volumen...")

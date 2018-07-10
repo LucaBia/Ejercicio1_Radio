@@ -36,12 +36,6 @@ class radio(
     fun subirEstacion(valor: Double){
         Estacion = valor
     }
-    fun estacion(){
-        Estacion = 89.7
-    }
-    fun bajarEstacion(a: Double, b: Double): Double{
-        return a - b
-    }
 
 
     override fun toString(): String {
