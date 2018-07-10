@@ -1,10 +1,12 @@
 package main.utils
 
+import sun.tools.tree.DoubleExpression
+
 class radio(
         var Estado: Boolean = false,
         var Frecuencia: String,
         var Volumen: Int = 10,
-        var Estacion: Double
+        var Estacion: Double = 89.7
 
 ){
     fun encender(){
@@ -31,8 +33,14 @@ class radio(
         Volumen -= 1
     }
 
-    fun subirEstacion(a: Double, b: Double): Double{
-        return a + b
+    fun subirEstacion(valor: Double){
+        Estacion = valor
+    }
+    fun estacion(){
+        Estacion = 89.7
+    }
+    fun bajarEstacion(a: Double, b: Double): Double{
+        return a - b
     }
 
 

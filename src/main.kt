@@ -57,14 +57,23 @@ fun main(args: Array<String>) {
             println(RadioInicial)
             println("")
         } else if (opcion == "5") {
+            println("Su estacion actual es: ${RadioInicial.Estacion}" )
             println("Ingrese el valor de cuanto quiere subir la estación de radio (Ej: 3.5):")
             var respuesta: String = readLine()!!
             var respuesta2: Double = respuesta.toDouble()
-            val resultado: Double = RadioInicial.subirEstacion(89.7, respuesta2)
-            println (resultado)
-
+            var suma = RadioInicial.Estacion + respuesta2
+            RadioInicial.subirEstacion(suma)
+            println (RadioInicial)
+            println("")
         } else if (opcion == "6"){
-
+            println("Su estacion actual es: ${RadioInicial.Estacion}" )
+            println("Ingrese el valor de cuanto quiere bajar la estación de radio (Ej: 3.5):")
+            var respuesta: String = readLine()!!
+            var respuesta2: Double = respuesta.toDouble()
+            var resta = RadioInicial.Estacion - respuesta2
+            RadioInicial.subirEstacion(resta)
+            println (RadioInicial)
+            println("")
         }else if (opcion == "7"){
             println("Apagando radio...")
             println("")
